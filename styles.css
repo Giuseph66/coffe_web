@@ -1,0 +1,246 @@
+:root {
+    --coffee-dark: #2C1810;
+    --coffee-medium: #5D4037;
+    --coffee-light: #8D6E63;
+    --cream: #F5F5DC;
+    --gold: #D4AF37;
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --coffee-accent: #8B4513;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: linear-gradient(135deg, var(--cream) 0%, #FFF8E1 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo i {
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    color: var(--coffee-dark);
+    font-weight: 700;
+}
+
+.description {
+    text-align: center;
+    color: var(--coffee-medium);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+.download-section {
+    margin: 2rem 0;
+}
+
+.download-content, .ios-content {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.android-header {
+    margin-bottom: 2rem;
+}
+
+.android-header h2 {
+    color: var(--coffee-dark);
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
+
+.os-icon {
+    width: 80px;
+    height: 80px;
+    filter: brightness(0) saturate(100%) invert(19%) sepia(14%) saturate(2169%) hue-rotate(346deg) brightness(94%) contrast(90%);
+    transition: transform 0.3s ease;
+}
+
+.android-icon {
+    margin-bottom: 1rem;
+}
+
+.ios-icon {
+    margin-bottom: 1.5rem;
+}
+
+.os-icon:hover {
+    transform: scale(1.1);
+}
+
+.app-info {
+    margin: 2rem 0;
+}
+
+.app-details {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--coffee-medium);
+    font-size: 1.1rem;
+}
+
+.detail-item i {
+    color: var(--coffee-accent);
+    font-size: 1.2rem;
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: var(--coffee-accent);
+    color: var(--text-light);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+}
+
+.download-button:hover {
+    background-color: var(--coffee-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.download-button i {
+    font-size: 1.4rem;
+}
+
+.installation-steps {
+    margin-top: 2rem;
+    text-align: left;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    border: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.installation-steps h3 {
+    color: var(--coffee-dark);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.installation-steps ol {
+    margin-left: 1.5rem;
+}
+
+.installation-steps li {
+    margin-bottom: 1rem;
+    color: var(--coffee-medium);
+}
+
+.ios-message {
+    font-size: 1.2rem;
+    color: var(--coffee-medium);
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 2rem;
+    }
+
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .os-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .download-button {
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .installation-steps {
+        padding: 1.5rem;
+    }
+
+    .app-details {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 1.5rem;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .os-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .download-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .app-details {
+        flex-direction: column;
+        gap: 1rem;
+    }
+} 
